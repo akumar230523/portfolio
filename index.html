@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/AmitKumar.png" type="png">
+    <title> Amit Kumar </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3fe022bc1f.js" crossorigin="anonymous" defer></script>
+</head>
+
+<body onload="window.scrollTo(0,0)">
+
+    <!-- ------------------------------------------------------------------------------- HEADER -->
+    <header>
+        <h1> Amit Kumar </h1>
+        <nav id="navLinks">
+            <a href="#home"> HOME </a>
+            <a href="#about"> ABOUT </a>
+            <a href="#skill"> SKILL </a>
+            <a href="#project"> PROJECT </a>
+            <a href="#contact"> CONTACT </a>
+        </nav>
+        <div>
+            <button onclick="toggleMode()">
+                <i id="modeIcon" class="fa-regular fa-sun fa-lg"></i>
+            </button>
+            <button id="bars" onclick="toggleMenu()"> 
+                <i class="fa fa-bars fa-xl"></i> 
+            </button>
+        </div>
+    </header>
+
+    <!-- --------------------------------------------------------------------------------- MAIN -->
+    <main>
+        
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Home Section -->
+        <section class="page" id="home">
+            <div class="h-left">
+                <div id="intro">
+                    <h2> Hi, I'm <span> Amit Kumar </span> </h2>
+                    <h3> FULL-STACK DEVELOPER </h3>
+                    <br>
+                    <p> 
+                        A passionate Software Developer with hands-on experience in building modern responsive web applications using technologies like
+                        <strong> HTML, CSS, JavaScript,  React.js, Node.js, Express.js, </strong> and <strong> MongoDB. </strong>
+                    </p>
+                </div>
+                <div id="resume">
+                    <a href="https://docs.google.com/document/d/1ZaehUO0ycb_WGXMFnXwzjY81vKDG29iIjToObJ74SHs/edit?usp=sharing" target="_blank"> 
+                        <i class="fa-regular fa-file"></i> Resume 
+                    </a>
+                </div>
+                <div id="social">
+                    <a href="https://www.linkedin.com/in/amit-kumar-270523-/" target="_blank" > 
+                        <i class="fa-brands fa-linkedin fa-2xl" style="color: #0080c0;"></i>     <!-- LinkedIn Profile -->
+                    </a>
+                    <a href="https://github.com/akumar230523" target="_blank"> 
+                        <i class="fa-brands fa-square-github fa-2xl" style="color: var(--wb-color);"></i>     <!-- GitHub Profile -->
+                    </a>
+                    <a href="https://www.instagram.com/akumar230523/" target="_blank"> 
+                        <i class="fa-brands fa-square-instagram fa-2xl" style="color: #ff0080;"></i>     <!-- Instagram Profile --> 
+                    </a>
+                    <a href="https://t.me/the_7kumar" target="_blank"> 
+                        <i class="fa-brands fa-telegram fa-2xl" style="color: #70c0fc;"></i>     <!-- Telegram Profile --> 
+                    </a>
+                </div>
+            </div>
+            <div class="h-right">
+                <figure>
+                    <img src="img/home-image.jpeg" alt="Amit Kumar profile photo">
+                </figure>
+            </div>
+        </section>
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  About Section -->
+        <section class="page" id="about">
+            <h1> About Me </h1>
+            <div class="a-left">
+                <figure>
+                    <img src="img/about-image.jpeg" alt="Amit Kumar profile photo">
+                </figure>
+            </div>
+            <div class="a-right">
+                <p>
+                    Hi, I’m Amit Kumar, a passionate Full Stack Developer with hands-on experience in building responsive web applications using 
+                    <strong> HTML, CSS, JavaScript, React.js, Node.js, Express.js, </strong> and <strong> MongoDB </strong>. 
+                </p> 
+                <br>
+                <p>
+                    I specialize in developing user-friendly interfaces and robust backend systems that transform ideas into functional solutions. 
+                    My projects, including a <i> personal portfolio website, a weather forecast application, an e-commerce application, </i> 
+                    and a <i> YouTube clone, </i> showcase my ability to solve real-world problems across both frontend and backend development.
+                </p>
+                <br>
+                <details>
+                    <summary> Read more.. </summary>
+                    <p>
+                        I completed my <i> B.Tech </i> from <i> Netaji Subhas University of Technology </i>, 
+                        after finishing high school in the science stream from <i> Kendriya Vidyalaya No. 2, Delhi </i>. <br>
+                        Beyond coding, I am deeply curious about global affairs and enjoy expressing my creativity through sketching and visual art.
+                    </p>
+                    <br>
+                    <p>
+                        I am always motivated to learn new technologies, collaborate with other professionals, 
+                        and contribute to impactful products that make a meaningful difference.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Skill Section -->
+        <section class="page" id="skill">
+            <h1> My Skills </h1>
+            <!-- Linear Progress Bars -->
+            <div class="linear">
+                <h3> - Programming Languages & Technologies - </h3>
+                <p> C++ </p>
+                <div class="lpb" id="lpb1"> 100% </div>
+                <p> Python </p>
+                <div class="lpb" id="lpb2"> 50% </div>
+                <p> HTML </p>
+                <div class="lpb" id="lpb3"> 100% </div>
+                <p> CSS </p>
+                <div class="lpb" id="lpb4"> 100% </div>
+                <p> JavaScript </p>
+                <div class="lpb" id="lpb5"> 75% </div>
+                <p> React.js </p>
+                <div class="lpb" id="lpb6"> 75% </div>
+                <p> Node.js </p>
+                <div class="lpb" id="lpb7"> 75% </div>                
+                <p> Express.js </p>
+                <div class="lpb" id="lpb8"> 75% </div>
+                <p> MongoDB </p>
+                <div class="lpb" id="lpb9"> 50% </div>
+            </div>
+            <!-- Circular Progress Bars -->
+            <div class="circular">
+                <h3> - Known Concepts - </h3>
+                <div id="cir1">
+                    <div class="cir2">
+                        <div class="cpb" id="cpb1"> 50% </div>
+                        <p> Data Structures and Algorithms </p>
+                    </div>
+                    <div class="cir2">
+                        <div class="cpb" id="cpb2"> 75% </div>
+                        <p> Database Management System </p>
+                    </div>
+                    <div class="cir2">
+                        <div class="cpb" id="cpb3"> 60% </div>
+                        <p> Object - Oriented Programming </p>
+                    </div>
+                    <div class="cir2">
+                        <div class="cpb" id="cpb4"> 75% </div>
+                        <p> Internet of Things (IoT) </p>
+                    </div> 
+                </div>
+            </div>
+            <!--  -->
+        </section>
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Certificate Section -->
+        <section class="page" id="certifications">
+            <h1> My Certifications </h1>
+            <div id="cf_cards">     
+                <!-- Certificate 1: -->
+                <div class="cf_card">
+                    <img src="img/certificate1.jpg" alt="Certificate 1">
+                    <div class="cf_data">
+                        <p> <b> Affective Computing </b> <br> <i> Issued by: </i> NPTEL </p> <br>
+                        <a href="https://internalapp.nptel.ac.in/noc/Ecertificate/?q=NPTEL25CS04S35370369704200517" target="_blank"> 
+                            View Certificate 
+                        </a> 
+                    </div> 
+                </div>
+                <!-- Certificate 2: -->
+                <div class="cf_card">
+                    <img src="img/certificate2.jpg" alt="Certificate 1">
+                    <div class="cf_data">
+                        <p> <b> Introduction to Industry 4.0 and IIoT </b> <br> <i> Issued by: </i> NPTEL </p> <br>
+                        <a href="https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS95S35090878603916530" target="_blank"> 
+                            View Certificate 
+                        </a> 
+                    </div> 
+                </div>
+                <!-- Certificate 3: -->
+                <div class="cf_card">
+                    <img src="img/certificate3.jpg" alt="Certificate 1">
+                    <div class="cf_data">
+                        <p> <b> Introduction to Internet of Things </b> <br> <i> Issued by: </i> NPTEL </p> <br>
+                        <a href="http://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS35S65430541730394983" target="_blank"> 
+                            View Certificate 
+                        </a> 
+                    </div> 
+                </div>
+                <!-- Certificate 4: -->
+                <div class="cf_card">
+                    <img src="img/certificate4.jpg" alt="Certificate 2">
+                    <div class="cf_data">
+                        <p> <b> DSA with C++ </b> <br> <i> Issued by: </i> Coding Blocks </p> <br>
+                        <a href="https://online.codingblocks.com/certificates/CBOL-260500-633a2caa" target="_blank"> 
+                            View Certificate 
+                        </a> 
+                    </div> 
+                </div>
+                <!--  -->
+            </div>
+        </section>
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Project Section -->
+
+        <section class="page" id="project">
+            <h1> My Projects </h1>
+            <div id="pj-cards">
+               <!-- Project 1: Portfolio Website -->
+                <div class="pj-card">
+                    <div class="pj-info1">
+                        <img src="img/AmitKumar.png" alt="Portfolio Website Project">
+                        <div class="pj-links">
+                            <a href="https://github.com/akumar230523?tab=repositories" target="_blank"> 
+                                <i class="fab fa-github"></i> GitHub 
+                            </a>
+                            <a href=" " target="_blank"> 
+                                <i class="fas fa-external-link-alt"></i> Demo 
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pj-info2">
+                        <h3> Portfolio Website </h3>
+                        <p> 
+                            Developed a responsive single-page personal portfolio website 
+                            to showcase my profile, skills, certifications, and projects. 
+                            Includes smooth animations, hover effects, and a day/night theme toggle for an engaging user experience.
+                        </p>
+                        <div class="pj-skills">
+                            <span> <i class="fa-brands fa-html5" style="color: #E34F26;"></i> HTML </span>
+                            <span> <i class="fa-brands fa-css3-alt" style="color: #264DE4;"></i> CSS </span>
+                        </div>
+                    </div>
+                </div>               
+                <!-- Project 2: Weather Forecast Application -->
+                <div class="pj-card">
+                    <div class="pj-info1">
+                        <img src="img/WeatherForecast.png" alt="Weather Forecast App Project">
+                        <div class="pj-links">
+                            <a href="https://github.com/akumar230523?tab=repositories" target="_blank"> 
+                                <i class="fab fa-github"></i> GitHub 
+                            </a>
+                            <a href=" " target="_blank"> 
+                                <i class="fas fa-external-link-alt"></i> Demo 
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pj-info2">
+                        <h3> Weather Forecast Application </h3>
+                        <p> 
+                            Built a responsive weather forecast app using the OpenWeatherMap API 
+                            to provide real-time weather updates and 4-day forecasts. 
+                            Features include city and location-based search, searched stored locally, and a clean, mobile-friendly UI.
+                        </p>
+                        <div class="pj-skills">
+                            <span> <i class="fa-brands fa-html5" style="color: #E34F26;"></i> HTML </span>
+                            <span> <i class="fa-brands fa-css3-alt" style="color: #264DE4;"></i> CSS </span>
+                            <span> <i class="fa-brands fa-js" style="color: #F7DF1E;"></i> JavaScript </span>
+                        </div>
+                    </div>
+                </div>                
+                <!-- Project 3: E-commerce Application -->
+                <div class="pj-card">
+                    <div class="pj-info1">
+                        <img src="img/ShoppyGlobe.png" alt="E-commerce Application Project">
+                        <div class="pj-links">
+                            <a href="https://github.com/akumar230523?tab=repositories" target="_blank"> 
+                                <i class="fab fa-github"></i> GitHub 
+                            </a>
+                            <a href=" " target="_blank"> 
+                                <i class="fas fa-external-link-alt"></i> Demo 
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pj-info2">
+                        <h3> E-commerce Application </h3>
+                        <p> 
+                            Built a e-commerce application featuring product listing, search, detailed product pages, 
+                            and secure cart management for a seamless shopping experience. 
+                            Enhanced usability with responsive design, lazy loading, and efficient error handling.
+                        </p>
+                        <div class="pj-skills">
+                            <span> <i class="fa-brands fa-react" style="color: #61DAFB;"></i> React.js </span>
+                            <span> <i class="fa-brands fa-node-js" style="color: #539E43;"></i> Node.js </span>
+                            <span> <i class="fa-solid fa-server" style="color: var(--wb-color);"></i> Express.js </span>
+                            <span> <i class="fa-solid fa-database" style="color: #47A248;"></i> MongoDB </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4: YouTube Clone -->
+                <div class="pj-card">
+                    <div class="pj-info1">
+                        <img src="img/YouTube.png" alt="YouTube Clone Project">
+                        <div class="pj-links">
+                            <a href="https://github.com/akumar230523?tab=repositories" target="_blank"> 
+                                <i class="fab fa-github"></i> GitHub 
+                            </a>
+                            <a href=" " target="_blank"> 
+                                <i class="fas fa-external-link-alt"></i> Demo 
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pj-info2">
+                        <h3> YouTube Clone </h3>
+                        <p> 
+                            Developed a YouTube clone, responsive and interactive video platform 
+                            where users can sign up, sign in, manage their channels and videos. 
+                            Designed with responsive layouts and optimized for a smooth user experience across devices.
+                        </p>
+                        <div class="pj-skills">
+                            <span> <i class="fa-brands fa-react" style="color: #61DAFB;"></i> React.js </span>
+                            <span> <i class="fa-brands fa-node-js" style="color: #539E43;"></i> Node.js </span>
+                            <span> <i class="fa-solid fa-server" style="color: var(--wb-color);"></i> Express.js </span>
+                            <span> <i class="fa-solid fa-database" style="color: #47A248;"></i> MongoDB </span>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+            </div>
+        </section>
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Contact Section -->
+        <section class="page" id="contact">
+            <h1> Contact Me </h1>
+            <form action="https://formsubmit.co/amit.kumar.270523@gmail.com" method="POST">
+                <p> I am always open to discussing new projects, collaborations, or opportunities to contribute as a professional developer. </p>
+                <fieldset>
+                    <input type="text" id="name" name="name" placeholder="Full Name" required>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                    <textarea id="message" name="message" rows="5" placeholder="Type your message.. ." required></textarea>
+                </fieldset>
+                <button type="submit" id="submit"> Send Message <i class="fa-solid fa-paper-plane"></i> </button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- ------------------------------------------------------------------------------- FOOTER -->
+    <footer>
+        <!-- Review -->
+        <div class="review">
+            <h4> REVIEW </h4>
+            <a href="#home"> Home </a> <br> 
+            <a href="#skill"> Skills </a> <br> 
+            <a href="#certifications"> Certifications </a> <br>
+            <a href="#project"> Project </a> <br> 
+        </div>
+        <hr id="hr1">
+        <!-- Project -->
+        <div class="project">
+            <h4> PROJECT </h4>
+            <a href="" target="_blank"> 
+                Portfolio Website 
+            </a> <br>
+            <a href="" target="_blank"> 
+                Weather Forecast Application 
+            </a> <br>
+            <a href="" target="_blank"> 
+                E-commerce Application 
+            </a> <br>
+            <a href="" target="_blank"> 
+                YouTube Clone 
+            </a>
+        </div>
+        <hr id="hr2">
+        <!-- Reach us -->
+        <div class="reach_us">
+            <h4> REACH US </h4>
+            <a href="https://www.google.com/maps/place/Palam,+South+West+Delhi,+Delhi,+110045" target="_blank">
+                <i class="fa-solid fa-house"></i> &nbsp; ABC - 124, Delhi, INDIA - 110045
+            </a> 
+            <br>
+            <a href="tel:+919205280247" target="_blank"> 
+                <i class="fa-solid fa-phone" style="color: #00ff00;"></i> &nbsp; + 91 - 9205280247 
+            </a> 
+            <br>
+            <a href="mailto:amit.kumar.270523@gmail.com" target="_blank"> 
+                <i class="fa-regular fa-envelope" style="color: #0000ff;"></i> &nbsp; amit.kumar.270523@gmail.com 
+            </a>
+        </div>
+        <hr id="hr3">
+        <!-- Copyright Information -->
+        <div id="cri">
+            <p> &copy; 2025 Amit Kumar <br> All Rights Reserved. </p>
+        </div>
+    </footer>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+
+    <script>
+        // Toggle Mode Function
+        function toggleMode() {
+            const icon = document.getElementById("modeIcon");
+            document.body.classList.toggle("light-mode");
+            if (document.body.classList.contains("light-mode")) {
+                icon.classList.replace('fa-sun', 'fa-moon');
+            } 
+            else {
+                icon.classList.replace('fa-moon', 'fa-sun');
+            }
+        }
+        // Tooggle Menu Function
+        function toggleMenu() {
+            const nav = document.getElementById("navLinks");
+              if (nav) {
+                nav.classList.toggle('show');
+            }
+        }
+    </script>
+    
+</body>
+
+</html>
+
+
+
