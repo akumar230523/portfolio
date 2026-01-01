@@ -1,0 +1,1139 @@
+* {
+    border: none;
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    /* outline: 1px solid red; */
+}
+
+:root {
+    --b-color: black;
+    --w-color: white;
+    --bw-color: rgba(0, 0, 0, 0.9);
+    --wb-color: rgb(255, 255, 255);
+    --a1-color: rgb(10, 102, 194);
+    --a2-color: rgba(10, 102, 194, 0.5);
+    --a3-color: rgba(10, 102, 194, 0.1);
+    --g1-color: rgba(128, 128, 128);
+    --g2-color: rgba(128, 128, 128, 0.5);
+}
+
+body {
+    background-color: var(--bw-color);
+    color: var(--wb-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: all 1s ease;
+}
+
+body.light-mode {
+    --bw-color: rgba(255, 255, 255, 0.9);
+    --wb-color: rgb(0, 0, 0);
+}
+
+/* -------------------------------------------------------------------------------------- HEADER */
+
+header {
+    background: linear-gradient(to bottom, var(--b-color), rgba(0, 0, 0, 0.9));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+/* ------------------------------------------- */
+
+header>a {
+    color: var(--bw-color);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--a1-color);
+}
+
+/* ------------------------------------------- */
+
+header #text-nav {
+    display: flex;
+    gap: 20px;
+}
+
+#text-nav a {
+    color: var(--w-color);
+}
+
+#text-nav a:hover {
+    color: var(--a1-color);
+}
+
+#text-nav a.active {
+    color: var(--a1-color);
+    font-weight: bold;
+}
+
+/* ------------------------------------------- */
+
+header #icon-nav {
+    display: flex;
+    gap: 20px;
+}
+
+#icon-nav button {
+    background-color: var(--b-color);
+    color: var(--w-color);
+    cursor: pointer;
+    width: 20px;
+}
+
+#icon-nav button:hover {
+    color: var(--a1-color);
+}
+
+#icon-nav #bars {
+    display: none;
+}
+
+/* Responsive Design -------------------------------------------------- */
+
+@media (max-width: 750px) {
+    header #text-nav {
+        background: linear-gradient(to bottom, var(--b-color), rgba(0, 0, 0, 0.9));
+        display: none;
+        flex-direction: column;
+        padding: 10px 20px;
+        position: absolute;
+        right: 0px;
+        top: 50px;
+    }
+
+    #text-nav.show {
+        display: flex;
+    }
+
+    #icon-nav #bars {
+        display: block;
+    }
+}
+
+/* ======================================================================================== MAIN */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  Page Class */
+
+.page {
+    display: flex;
+    padding: 100px;
+}
+
+.page h1 {
+    background: linear-gradient(45deg, var(--wb-color), var(--a1-color));
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    display: inline-block;
+    margin: 0 auto 50px auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Responsive Design  - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+@media (max-width: 1000px) {
+    .page {
+        padding: 100px 50px;
+    }
+
+    .page h1 {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .page {
+        padding: 100px 35px;
+    }
+
+    .page h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .page {
+        padding: 100px 20px;
+    }
+
+    .page h1 {
+        font-size: 2rem;
+    }
+}
+
+/* -------------------------------------------------------------------------------- Home Section */
+
+#home {
+    flex-direction: column;
+}
+
+/* -------------------------------------------------------------------- */
+
+#home h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+}
+
+/* -------------------------------------------------------------------- */
+
+#home .my {
+    display: flex;
+}
+
+/* My Intro ---------------------------------- */
+
+.my .my-intro {
+    border-bottom: 2px solid var(--a1-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    width: 50%;
+}
+
+/* ------------------ */
+
+.my-intro .intro-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.intro-text h3 {
+    animation: slideFromLeft 1.5s ease-out forwards;
+    color: var(--a1-color);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    opacity: 0;
+    transform: translateX(-150px);
+}
+
+@keyframes slideFromLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.intro-text p {
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* ------------------ */
+
+.my-intro .intro-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.intro-link #resume-btn {
+    background-color: var(--a2-color);
+    border: 1px solid var(--a1-color);
+    border-radius: 20px;
+    color: var(--wb-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: all ease;
+}
+
+.intro-link #resume-btn:hover {
+    background-color: var(--a1-color);
+    color: var(--w-color);
+}
+
+.intro-link .gl-icon {
+    display: flex;
+    gap: 20px;
+}
+
+.gl-icon a {
+    transition: transform 0.5s ease;
+}
+
+.gl-icon a:hover {
+    transform: translateY(-10px);
+}
+
+/* My Photo ---------------------------------- */
+
+.my .my-photo {
+    border-bottom: 2px solid var(--a1-color);
+    display: grid;
+    place-items: center;
+    padding-bottom: 2px;
+    width: 50%;
+}
+
+.my-photo img {
+    animation: slideFromRight 2.5s ease-out forwards;
+    height: auto;
+    opacity: 0;
+    width: 100%;
+    max-width: 420px;
+    transform: translateX(150px);
+}
+
+@keyframes slideFromRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design -------------------------------------------------- */
+
+@media (max-width: 750px) {
+    #home h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    #home .my {
+        flex-direction: column;
+    }
+
+    .my .my-intro {
+        gap: 50px;
+        width: 100%;
+    }
+
+    .intro-text h3 {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    .my .my-photo {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    #home h2 {
+        font-size: 2rem;
+    }
+
+    .intro-text h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ------------------------------------------------------------------------------- About Section */
+
+#about-me {
+    background-color: var(--a3-color);
+    flex-direction: column;
+}
+
+/* -------------------------------------------------------------------- */
+
+#about-me article {
+    border-bottom: 2px solid var(--a1-color);
+    border-radius: 20px;
+}
+
+/* I am -------------------------------------- */
+
+#about-me .iam {
+    padding: 0 20px 20px 20px;
+}
+
+.iam p {
+    line-height: 1.5;
+    padding-bottom: 5px;
+    text-align: justify;
+}
+
+.iam details summary {
+    cursor: pointer;
+    display: inline-block;
+}
+
+details[open] summary i {
+    transform: rotate(90deg);
+}
+
+/* Experience & Education -------------------- */
+
+#about-me .e-div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* ------------------ */
+
+.e-div h2 {
+    color: var(--a1-color);
+    font-size: 1.5rem;
+}
+
+/* ------------------ */
+
+.e-div .card .card-title {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-title img {
+    border: 1px solid var(--g1-color);
+    height: 50px;
+    margin-right: 10px;
+    width: 50px;
+}
+
+.card-title h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.card-title .tdl {
+    border-bottom: 1px solid var(--g1-color);
+    color: var(--g1-color);
+    display: flex;
+    flex: 1 100%;
+    flex-wrap: wrap;
+    justify-content: end;
+    padding: 10px 0;
+}
+
+.card-title .abbr-text {
+    display: none;
+}
+
+/* ------------------ */
+
+.e-div .card .card-desc {
+    line-height: 1.5;
+    list-style: square;
+    padding: 15px 0 0 15px;
+}
+
+.card-desc li {
+    border-bottom: 1px dashed var(--g2-color);
+}
+
+/* Responsive Design -------------------------------------------------- */
+
+@media (max-width: 550px) {
+    .card-title .full-text {
+        display: none;
+    }
+
+    .card-title .abbr-text {
+        display: block;
+    }
+}
+
+/* ------------------------------------------------------------------------------ Skills Section */
+
+#my-skills {
+    flex-direction: column;
+}
+
+/* Main Skills -------------------------------------------------------- */
+
+#my-skills .main-skills {
+    display: flex;
+}
+
+.main-skills h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+}
+
+/* Linear Progress Bars ---------------------- */
+
+.main-skills .linear {
+    border-top: 2px solid var(--a1-color);
+    border-left: 2px solid var(--a1-color);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px;
+    width: 50%;
+}
+
+.linear .lpb-div {
+    width: 100%;
+}
+
+.lpb-div p {
+    font-style: italic;
+    padding-bottom: 1px;
+}
+
+.lpb-div .lpb {
+    border: 1px solid var(--a1-color);
+    font-size: 0.7rem;
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+
+/* Linear Progress Bars Colors */
+
+#lpb1,
+#lpb4 {
+    background: linear-gradient(to right, var(--a2-color));
+}
+
+#lpb2,
+#lpb9,
+#lpb10 {
+    background: linear-gradient(to right, var(--a2-color) 90%, transparent 10%);
+}
+
+#lpb5,
+#lpb6 {
+    background: linear-gradient(to right, var(--a2-color) 85%, transparent 15%);
+}
+
+#lpb3,
+#lpb7,
+#lpb8 {
+    background: linear-gradient(to right, var(--a2-color) 80%, transparent 20%);
+}
+
+/* Circular Progress Bars -------------------- */
+
+.main-skills .circular {
+    border-bottom: 2px solid var(--a1-color);
+    border-right: 2px solid var(--a1-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    padding: 20px;
+    width: 50%;
+}
+
+.circular .cpb-div {
+    width: 200px;
+}
+
+.cpb-div p {
+    font-style: italic;
+    padding-top: 1px;
+    text-align: center;
+}
+
+.cpb-div .cpb {
+    border: 1px solid var(--a1-color);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    height: 100px;
+    margin: auto;
+    width: 100px;
+}
+
+/* Circular Progress Bars Colors */
+
+#cpb1 {
+    background: conic-gradient(var(--a2-color) 0deg, var(--a2-color) 342deg, transparent 18deg);
+}
+
+#cpb2 {
+    background: conic-gradient(var(--a2-color) 0deg, var(--a2-color) 270deg, transparent 90deg);
+}
+
+#cpb3 {
+    background: conic-gradient(var(--a2-color) 0deg, var(--a2-color) 288deg, transparent 72deg);
+}
+
+#cpb4 {
+    background: conic-gradient(var(--a2-color) 0deg, var(--a2-color) 325deg, transparent 35deg);
+}
+
+#cpb5 {
+    background: conic-gradient(var(--a2-color) 0deg, var(--a2-color) 306deg, transparent 54deg);
+}
+
+#cpb6 {
+    background: conic-gradient(var(--a2-color) 0deg, var(--a2-color) 360deg);
+}
+
+/* Additional skills -------------------------------------------------- */
+
+#my-skills .additional-skills {
+    margin-top: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.additional-skills .skills-track {
+    animation: scroll-left 50s linear infinite;
+    display: flex;
+    gap: 20px;
+    width: max-content;
+}
+
+.skills-track span {
+    border: 1px solid var(--a1-color);
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+.skills-track span:hover {
+    background-color: var(--a2-color);
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive Design -------------------------------------------------- */
+
+@media (max-width: 1000px) {
+    #my-skills .main-skills {
+        flex-direction: column;
+    }
+
+    .main-skills .linear,
+    .main-skills .circular {
+        width: 100%;
+    }
+}
+
+/* ---------------------------------------------------------------------- Certifications Section */
+
+#my-certifications {
+    background-color: var(--a3-color);
+    flex-direction: column;
+}
+
+/* ------------------------------------------- */
+
+#my-certifications .certifications {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.certifications .cf_cards {
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.cf_cards::-webkit-scrollbar {
+    height: 0;
+}
+
+.cf_cards .cf_card {
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid var(--g1-color);
+    border-bottom: 2px solid var(--a1-color);
+    border-radius: 10px;
+    padding: 10px;
+    min-width: 300px;
+    width: 100%;
+}
+
+.cf_card img {
+    background-color: var(--w-color);
+    height: 200px;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+}
+
+.cf_card .cf_data {
+    color: var(--w-color);
+    text-align: center;
+}
+
+.cf_data a {
+    background-color: var(--a2-color);
+    border: 1px solid var(--a1-color);
+    color: var(--w-color);
+    display: grid;
+    align-content: center;
+    height: 3em;
+    margin: 5px 0 10px 0;
+    padding: 5px 10px;
+    transition: all 0.5s ease;
+}
+
+.cf_data a:hover {
+    background-color: var(--a1-color);
+}
+
+/* ---------------------------------------------------------------------------- Projects Section */
+
+#my-projects {
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Main Projects ------------------------------------------------------ */
+
+#my-projects .main-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* ------------------------------------------- */
+
+.main-projects .arrow {
+    background-color: var(--a2-color);
+    border: 1px solid var(--a1-color);
+    border-radius: 50%;
+    color: var(--w-color);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s ease;
+    width: 50px;
+    z-index: 10;
+}
+
+.arrow:hover {
+    background-color: var(--a1-color);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.arrow.left {
+    left: -75px;
+}
+
+.arrow.right {
+    right: -75px;
+}
+
+/* Projects cards ---------------------------- */
+
+.main-projects .pj-cards {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.pj-cards .pj-card {
+    border: 2px solid var(--a1-color);
+    border-radius: 20px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+}
+
+.pj-cards .pj-card.active {
+    opacity: 1;
+    position: relative;
+    transform: translateX(0);
+}
+
+.pj-cards .pj-card.prev {
+    transform: translateX(-100%);
+}
+
+/* ------------------ */
+
+.pj-card .pj-info1 {
+    background: radial-gradient(circle, var(--a2-color), var(--b-color));
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    position: relative;
+    height: 250px;
+}
+
+.pj-info1 img {
+    box-shadow: 0 0 20px var(--a1-color);
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    width: 200px;
+}
+
+.pj-card:hover img {
+    transform: scale(1.05);
+}
+
+.pj-info1 .pj-links {
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    position: absolute;
+    bottom: -80px;
+    transition: bottom 0.5s ease;
+    width: 100%;
+}
+
+.pj-info1:hover .pj-links {
+    bottom: 0;
+}
+
+.pj-links a {
+    background-color: var(--a2-color);
+    border: 1px solid var(--a1-color);
+    border-radius: 10px;
+    color: var(--w-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    max-width: 200px;
+    width: 100%;
+    padding: 10px 20px;
+    transition: all 0.5s ease;
+}
+
+.pj-links a:hover {
+    background-color: var(--a1-color);
+    transform: translateY(-5px);
+}
+
+/* ------------------ */
+
+.pj-card .pj-info2 {
+    background-color: var(--a2-color);
+    padding: 20px;
+}
+
+.pj-info2 h3 {
+    background-color: var(--a1-color);
+    color: var(--w-color);
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: normal;
+    padding: 5px;
+    text-align: center;
+}
+
+.pj-info2 p {
+    padding: 10px 0;
+    text-align: justify;
+}
+
+.pj-info2 .pj-skills {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.pj-skills span {
+    background-color: var(--bw-color);
+    border: 1px solid var(--a1-color);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    padding: 5px 10px;
+    width: 150px;
+}
+
+/* Indicators --------------------------------------------------------- */
+
+#my-projects #indicators {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+}
+
+#indicators .indicator {
+    background-color: var(--a2-color);
+    border: 1px solid var(--a1-color);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 10px;
+    transition: all 0.5s ease;
+    width: 10px;
+}
+
+#indicators .indicator.active {
+    background-color: var(--a1-color);
+    transform: scale(1.3);
+}
+
+/* More Projects ------------------------------------------------------ */
+
+#my-projects .more-projects {
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.more-projects a {
+    color: var(--a1-color);
+    text-decoration: none;
+}
+
+.more-projects a:hover {
+    text-shadow: 2px 2px 2px var(--a2-color);
+}
+
+/* Responsive Design -------------------------------------------------- */
+
+@media (max-width: 750px) {
+    .arrow.left {
+        left: 10px;
+    }
+
+    .arrow.right {
+        right: 10px;
+    }
+}
+
+/* ----------------------------------------------------------------------------- Contect Section */
+
+#contact {
+    background-color: var(--a3-color);
+    flex-direction: column;
+}
+
+/* ------------------------------------------- */
+
+#contact>p {
+    font-size: 1.1rem;
+    font-style: italic;
+    text-align: center;
+    
+}
+
+/* Form -------------------------------------- */
+
+#contact form {
+    background-color: var(--bw-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 40px;
+    margin: 20px auto;
+    width: 50%;
+}
+
+/* ------------------ */
+
+form fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+fieldset legend {
+    color: var(--a1-color);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+fieldset input,
+fieldset textarea {
+    background: transparent;
+    border: 1px solid var(--g1-color);
+    color: var(--wb-color);
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+}
+
+fieldset input:focus,
+fieldset textarea:focus {
+    border: 1px solid var(--a1-color);
+}
+
+/* ------------------ */
+
+form button {
+    background-color: var(--a2-color);
+    border: 1px solid var(--a1-color);
+    border-radius: 10px;
+    color: var(--wb-color);
+    cursor: pointer;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    transition: all 0.5s ease;
+}
+
+form button:hover {
+    background-color: var(--a1-color);
+    color: var(--w-color);
+}
+
+/* ------------------------------------------- */
+
+#contact .call-email {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.call-email a {
+    background-color: var(--bw-color);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    height: 50px;
+    width: 50px;
+    transition: all 0.5s ease;
+}
+
+.call-email a:hover {
+    background-color: var(--a2-color);
+    box-shadow: 0 0 20px var(--a1-color);
+}
+
+/* Follow me --------------------------------- */
+
+#contact .follow_me {
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+.follow_me a {
+    color: var(--wb-color);
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+
+.follow_me a:hover {
+    color: var(--a1-color);
+    rotate: calc(12deg);
+    transform: scale(1.2);
+}
+
+/* Responsive Design -------------------------------------------------- */
+
+@media (max-width: 1000px) {
+    #contact form {
+        width: 75%;
+    }
+}
+
+@media (max-width: 750px) {
+    #contact form {
+        padding: 20px;
+        width: 87.5%;
+    }
+}
+
+@media (max-width: 500px) {
+    #contact form {
+        width: 100%;
+    }
+}
+
+/* -------------------------------------------------------------------------------------- FOOTER */
+
+footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-top: 2px solid var(--g1-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Review & Project -------------------------- */
+
+footer .review,
+footer .project {
+    flex: 1;
+}
+
+.review h4,
+.project h4 {
+    color: var(--w-color);
+    font-weight: normal;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.review a,
+.project a {
+    color: var(--w-color);
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.review a:hover,
+.project a:hover {
+    color: var(--a1-color);
+    transform: translateX(5px);
+}
+
+/* ------------------------------------------- */
+
+footer #hr1 {
+    border: 1px solid var(--g1-color);
+}
+
+
+footer #hr2 {
+    border: 1px solid var(--a1-color);
+    flex: 1 1 100%;
+}
+
+/* Copyright Information --------------------- */
+
+footer #cri {
+    color: var(--w-color);
+    flex: 1 1 100%;
+}
+
+/* Responsive Design -------------------------------------------------- */
+
+@media (max-width: 500px) {
+    footer {
+        flex-direction: column;
+    }
+}
+
+/* --------------------------------------------------------------------------------------------- */
+

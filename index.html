@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tabs icon and title -->
+    <link rel="icon" href="img/AmitKumar.png" type="image/png" />
+    <title> Amit Kumar </title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- JS -->
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/3fe022bc1f.js" crossorigin="anonymous"></script> <!-- Fontawesome Script -->
+
+</head>
+
+<body onload="window.scrollTo(0,0)">
+
+    <!-- ------------------------------------------------------------------------------- HEADER -->
+    <header>
+        <a href="#home"> AK </a>
+        <nav id="text-nav">
+            <a class="tn" href="#about-me"> ABOUT </a>
+            <a class="tn" href="#my-skills"> SKILLS </a>
+            <a class="tn" href="#my-certifications"> CERTIFICATIONS </a>
+            <a class="tn" href="#my-projects"> PROJECTS </a>
+            <a class="tn" href="#contact"> CONTACT </a>
+        </nav>
+        <nav id="icon-nav">
+            <button onclick="toggleMode()">
+                <i id="modeIcon" class="fa-regular fa-sun fa-lg"></i>
+            </button>
+            <button id="bars" onclick="toggleMenu()">
+                <i class="fa fa-bars fa-xl"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ================================================================================= MAIN -->
+    <main>
+
+        <!-- --------------------------------------------------------------------- Home Section -->
+        <section class="page" id="home">
+            <h2> Hi, I'm Amit Kumar </h2>
+            <!--  -->
+            <div class="my">
+                <!-- My Intro -->
+                <div class="my-intro">
+                    <div class="intro-text">
+                        <h3> FULL-STACK DEVELOPER </h3>
+                        <p>
+                            A passionate <em> full-stack developer </em> focused on building real-world projects using
+                            modern web technologies.
+                        </p>
+                    </div>
+                    <div class="intro-link">
+                        <a id="resume-btn"
+                            href="https://drive.google.com/file/d/1ArQ259qAu08xpJmdUiHamPiR68LjBuFS/view?usp=sharing"
+                            target="_blank"> <i class="fa-regular fa-file fa-lg"></i> Resume
+                        </a>
+                        <div class="gl-icon">
+                            <a href="https://github.com/akumar230523" target="_blank">
+                                <i class="fa-brands fa-github fa-2xl" style="color: var(--wb-color)"></i> <!-- GitHub Profile -->
+                            </a>
+                            <a href="https://www.linkedin.com/in/amit-kumar-270523-/" target="_blank">
+                                <i class="fa-brands fa-linkedin-in fa-2xl" style="color: #0a66c2"></i> <!-- LinkedIn Profile -->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- My Photo -->
+                <div class="my-photo">
+                    <img src="img/portfolio-photo.png" alt="Amit Kumar Profile-Photo" />
+                </div>
+            </div>
+        </section>
+
+        <!-- -------------------------------------------------------------------- About Section -->
+        <section class="page" id="about-me">
+            <h1> About Me </h1>
+            <!-- I am -->
+            <article class="iam">
+                <p>
+                    I am a passionate <b> Full-Stack Developer </b> who enjoys building modern, user-friendly, and scalable web applications.
+                    I specialize in creating responsive interfaces using HTML, CSS, JavaScript, and React.
+                    On the backend, I work with Node.js, Express, and RESTful APIs to develop secure and efficient systems.
+                    I have hands-on experience with real-world projects that focus on performance and clean architecture.
+                </p>
+                <details>
+                    <summary> <i class="fa-solid fa-angle-right"></i> Read more </summary>
+                    <p>
+                        I enjoy solving problems, learning new technologies, continuously improving my skills,
+                        collaborate with cross-functional teams, and contribute to impactful products that create
+                        real-world value.
+                    </p>
+                </details>
+            </article>
+            <!-- Experience -->
+            <article class="e-div">
+                <h2> Experience <i class="fa-solid fa-briefcase"></i> </h2>
+                <div class="card">
+                    <div class="card-title">
+                        <img src=img/umpl.jpeg>
+                        <div>
+                            <h3> Frontend Developer </h3>
+                            <i class="full-text"> Unified Mentor Private Limited </i>
+                            <i class="abbr-text"> Unified Mentor </i>
+                        </div>
+                        <div class="tdl">
+                            <p> Internship, Oct 2025 - Dec 2025 </p>
+                            <i> &nbsp; | Gurugram, India </i>
+                        </div>
+                    </div>
+                    <ul class="card-desc">
+                        <li> Built responsive web applications using HTML, CSS, JavaScript and React. </li>
+                        <li> Collaborated with cross-functional teams to resolve UI/UX issues and improve performance. </li>
+                        <li> Developed 20+ reusable UI components and layouts using React, React Hooks, and Tailwind CSS. </li>
+                        <li> Integrated APIs and implemented various features with interactive animations for better engagement. </li>
+                    </ul>
+                </div>
+            </article>
+            <!-- Education -->
+            <article class="e-div">
+                <h2> Education <i class="fa-solid fa-building-columns"></i> </h2>
+                <div class="card">
+                    <div class="card-title">
+                        <img src="img/nsut.jpeg" />
+                        <div>
+                            <h3 class="full-text"> Netaji Subhas University of Technology </h3>
+                            <h3 class="abbr-text"> NSUT </h3>
+                            <i class="full-text"> Bachelor of Technology - BTech </i>
+                            <i class="abbr-text"> BTech </i>
+                        </div>
+                        <div class="tdl">
+                            <p> Full-time, 2021 - 2025 </p>
+                            <i> &nbsp; | New Delhi, India </i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">
+                        <img src="img/kvs.png" />
+                        <div>
+                            <h3 class="full-text"> Kendriya Vidyalaya No. 2 </h3>
+                            <h3 class="abbr-text"> KV No. 2 </h3>
+                            <i class="full-text"> Senior Secondary - AISSCE </i>
+                            <i class="abbr-text"> AISSCE </i>
+                        </div>
+                        <div class="tdl">
+                            <p> Full-time, 2015 - 2021 </p>
+                            <i> &nbsp; | New Delhi, India </i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ------------------------------------------------------------------- Skills Section -->
+        <section class="page" id="my-skills">
+            <h1> My Skills </h1>
+            <!-- Main Skills -->
+            <div class="main-skills">
+                <!-- Linear progress bars -->
+                <article class="linear">
+                    <h3> - Programming & Technologies - </h3>
+                    <div class="lpb-div">
+                        <p> C++ </p>
+                        <div class="lpb" id="lpb1"> 100% </div>
+                    </div>
+                    <div class="lpb-div">
+                        <p> JavaScript </p>
+                        <div class="lpb" id="lpb2"> 90% </div>
+                    </div>
+                    <div class="lpb-div">
+                        <p> Python </p>
+                        <div class="lpb" id="lpb3"> 80% </div>
+                    </div>
+                    <div class="lpb-div">
+                        <p> HTML & CSS </p>
+                        <div class="lpb" id="lpb4"> 100% </div>
+                    </div>
+                    <div class="lpb-div">
+                        <p> React.js </p>
+                        <div class="lpb" id="lpb5"> 85% </div>
+                    </div>
+                    <div class="lpb-div">
+                        <p> Next.js </p>
+                        <div class="lpb" id="lpb6"> 85% </div>
+                    </div>
+                    <div class="lpb-div">
+                        <p> Node.js </p>
+                        <div class="lpb" id="lpb7"> 80% </div>
+                    </div>
+                    <div class="lpb-div">
+                        <p> Express.js </p>
+                        <div class="lpb" id="lpb8"> 80% </div>
+                    </div>
+                    <div class="lpb-div">
+                        <p> MongoDB </p>
+                        <div class="lpb" id="lpb9"> 90% </div>
+                    </div>
+                    <div class="lpb-div">
+                        <p> MySQL </p>
+                        <div class="lpb" id="lpb10"> 90% </div>
+                    </div>
+                </article>
+                <!-- Circular progress bars -->
+                <article class="circular">
+                    <h3> - Known Concepts - </h3>
+                    <div class="cpb-div">
+                        <div class="cpb" id="cpb1"> 95% </div>
+                        <p> API Development & Integration </p>
+                    </div>
+                    <div class="cpb-div">
+                        <div class="cpb" id="cpb2"> 75% </div>
+                        <p> Data Structures and Algorithms </p>
+                    </div>
+                    <div class="cpb-div">
+                        <div class="cpb" id="cpb3"> 80% </div>
+                        <p> Database Management System </p>
+                    </div>
+                    <div class="cpb-div">
+                        <div class="cpb" id="cpb4"> 90% </div>
+                        <p> Frontend Development </p>
+                    </div>
+                    <div class="cpb-div">
+                        <div class="cpb" id="cpb5"> 85% </div>
+                        <p> Object - Oriented Programming </p>
+                    </div>
+                    <div class="cpb-div">
+                        <div class="cpb" id="cpb6"> 100% </div>
+                        <p> Responsive Design </p>
+                    </div>
+                </article>
+            </div>
+            <!-- Additional Skills -->
+            <div class="additional-skills">
+                <article class="skills-track">
+                    <span> React-Router </span>
+                    <span> Redux Toolkit (RTK) </span>
+                    <span> Context API </span>
+                    <span> Axios / Fetch API </span>
+                    <span> RESTful APIs </span>
+                    <span> JWT Authentication </span>
+                    <span> Socket.IO </span>
+                    <span> Material UI (MUI) </span>
+                    <span> Bootstrap </span>
+                    <span> Tailwind CSS </span>
+                    <span> Firebase </span>
+                    <span> Cloudinary </span>
+                    <span> Pandas </span>
+                    <span> Git & GitHub </span>
+                    <span> Thunder Client </span>
+                    <!-- Duplicate for smooth infinite loop -->
+                    <span> React-Router </span>
+                    <span> Redux Toolkit (RTK) </span>
+                    <span> Context API </span>
+                    <span> Axios / Fetch API </span>
+                    <span> RESTful APIs </span>
+                    <span> JWT Authentication </span>
+                    <span> Socket.IO </span>
+                    <span> Material UI (MUI) </span>
+                    <span> Bootstrap </span>
+                    <span> Tailwind CSS </span>
+                    <span> Firebase </span>
+                    <span> Cloudinary </span>
+                    <span> Pandas </span>
+                    <span> Git & GitHub </span>
+                    <span> Thunder Client </span>
+                </article>
+            </div>
+        </section>
+
+        <!-- ----------------------------------------------------------- Certifications Section -->
+        <section class="page" id="my-certifications">
+            <h1> My Certifications </h1>
+            <!-- Certifications -->
+            <div class="certifications">
+                <!-- Development certifications -->
+                <article class="cf_cards">
+                    <!-- Certificate 4 -->
+                    <div class="cf_card">
+                        <img src="img/certificate/cert4.jpg" alt="Cert" />
+                        <div class="cf_data">
+                            <a href="https://trainings.internshala.com/s/v/3537529/a837fc33" target="_blank">
+                                Designing Web Pages Using HTML and CSS
+                            </a>
+                            <p> Issued by: <i> Internshala </i> </p>
+                        </div>
+                    </div>
+                    <!-- Certificate 6 -->
+                    <div class="cf_card">
+                        <img src="img/certificate/cert6.jpg" alt="cf-img" />
+                        <div class="cf_data">
+                            <a href="https://trainings.internshala.com/s/v/3785310/f98198f3" target="_blank">
+                                Developing Interactive Websites with JavaScript
+                            </a>
+                            <p> Issued by: <i> Internshala </i> </p>
+                        </div>
+                    </div>
+                    <!-- Certificate 7 -->
+                    <div class="cf_card">
+                        <img src="img/certificate/cert7.jpg" alt="Certificate 2" />
+                        <div class="cf_data">
+                            <a href="https://trainings.internshala.com/s/v/3785311/530b76f5" target="_blank">
+                                Building Modern Web Applications Using React
+                            </a>
+                            <p> Issued by: <i> Internshala </i> </p>
+                        </div>
+                    </div>
+                    <!-- Certificate 8 -->
+                    <div class="cf_card">
+                        <img src="img/certificate/cert8.jpg" alt="Certificate 2" />
+                        <div class="cf_data">
+                            <a href="https://trainings.internshala.com/s/v/3785314/becb2625" target="_blank">
+                                Mastering Node.js, Express.js and MongoDB
+                            </a>
+                            <p> Issued by: <i> Internshala </i> </p>
+                        </div>
+                    </div>
+                    <!-- Certificate 10 -->
+                    <div class="cf_card">
+                        <img src="img/certificate/cert10.jpg" alt="Certificate 1" />
+                        <div class="cf_data">
+                            <a href="https://trainings.internshala.com/s/v/3801502/b28ea8a1" target="_blank">
+                                Full Stack Development
+                            </a>
+                            <p> Issued by: <i> Internshala </i> </p>
+                        </div>
+                    </div>
+                    <!--  -->
+                </article>
+                <!-- Additional certifications -->
+                <article class="cf_cards">
+                    <!-- Certificate 1 -->
+                    <div class="cf_card">
+                        <img src="img/certificate/cert1.jpg" alt="Certificate 2" />
+                        <div class="cf_data">
+                            <a href="https://online.codingblocks.com/certificates/CBOL-260500-633a2caa" target="_blank">
+                                DSA with C++
+                            </a>
+                            <p> Issued by: <i> Coding Blocks </i> </p>
+                        </div>
+                    </div>
+                    <!-- Certificate 2 -->
+                    <div class="cf_card">
+                        <img src="img/certificate/cert2.jpg" alt="Certificate 1" />
+                        <div class="cf_data">
+                            <a href="https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS95S35090878603916530" target="_blank">
+                                Introduction to Industry 4.0 and Industrial IoT
+                            </a>
+                            <p> Issued by: <i> NPTEL (IIT-KGP) </i> </p>
+                        </div>
+                    </div>
+                    <!-- Certificate 3 -->
+                    <div class="cf_card">
+                        <img src="img/certificate/cert3.jpg" alt="Certificate 1" />
+                        <div class="cf_data">
+                            <a href="http://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS35S65430541730394983" target="_blank">
+                                Introduction to Internet of Things
+                            </a>
+                            <p> Issued by: <i> NPTEL (IIT-KGP) </i> </p>
+                        </div>
+                    </div>
+                    <!-- Certificate 5 -->
+                    <div class="cf_card">
+                        <img src="img/certificate/cert5.jpg" alt="Certificate 2" />
+                        <div class="cf_data">
+                            <a href="https://trainings.internshala.com/s/v/3538070/1eab59d1" target="_blank">
+                                Git and GitHub Mastering Version Control
+                            </a>
+                            <p> Issued by: <i> Internshala </i> </p>
+                        </div>
+                    </div>
+                    <!-- Certificate 9 -->
+                    <div class="cf_card">
+                        <img src="img/certificate/cert9.jpg" alt="Certificate 1" />
+                        <div class="cf_data">
+                            <a href="https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL25CS04S35370369704200517" target="_blank">
+                                Affective Computing
+                            </a>
+                            <p> Issued by: <i> NPTEL (IITD) </i> </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ----------------------------------------------------------------- Projects Section -->
+        <section class="page" id="my-projects">
+            <h1> My Projects </h1>
+            <!-- Main Projects -->
+            <div class="main-projects">
+                <!-- previous button -->
+                <button class="arrow left" onclick="prevCard()">
+                    <i class="fas fa-chevron-left fa-xl"></i>
+                </button>
+                <!-- Project cards -->
+                <div class="pj-cards" id="pj-cards">
+                    <!-- Project 1: Weather Forecast App -->
+                    <div class="pj-card">
+                        <div class="pj-info1">
+                            <img src="img/WeatherForecast.png" alt="project logo">
+                            <div class="pj-links">
+                                <a href="https://github.com/akumar230523/weather-forecast" target="_blank">
+                                    <i class="fab fa-github"></i> Repo
+                                </a>
+                                <a href="https://akumar230523.github.io/weather-forecast/" target="_blank">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="pj-info2">
+                            <h3> Weather Forecast App </h3>
+                            <p>
+                                Weather Forecast is a responsive web-based application developed using HTML,
+                                CSS, Tailwind CSS, and JavaScript that provides real-time weather information and a
+                                4-day forecast. The application integrates the OpenWeather API to fetch live weather
+                                data based on city search or the user’s current location using the Geolocation API. It
+                                displays temperature, humidity, wind speed, and weather conditions with interactive
+                                icons, while also storing recent searches using LocalStorage for improved user
+                                experience.
+                            </p>
+                            <div class="pj-skills">
+                                <span> <i class="fa-brands fa-html5" style="color: #E34F26;"> </i> HTML </span>
+                                <span> <i class="fa-brands fa-css3-alt" style="color: #264DE4;"> </i> CSS </span>
+                                <span> <i class="fa-brands fa-js" style="color: #F7DF1E;"> </i> JavaScript </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2: E-commerce App -->
+                    <div class="pj-card active">
+                        <div class="pj-info1">
+                            <img src="img/ShoppyGlobe.png" alt="project logo">
+                            <div class="pj-links">
+                                <a href="https://github.com/akumar230523/e-commerce" target="_blank">
+                                    <i class="fab fa-github"></i> Repo
+                                </a>
+                                <a href="https://akumar230523.github.io/e-commerce/" target="_blank">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                                </a>
+                            </div>
+                        </div>
+                        <div class="pj-info2">
+                            <h3> E-commerce App </h3>
+                            <p>
+                                ShoppyGlobe is a responsive React-based e-commerce web application that enables users to
+                                browse products, view detailed product information, and manage a shopping cart
+                                efficiently. The app fetches product data from an external API using custom hooks and
+                                useEffect with proper error handling. Redux is used for reliable cart state management,
+                                while React Router ensures smooth navigation with lazy loading for better performance.
+                                The project follows a modular component structure with clean, responsive styling.
+                            </p>
+                            <div class="pj-skills">
+                                <span> <i class="fa-brands fa-html5" style="color: #E34F26;"> </i> HTML </span>
+                                <span> <i class="fa-brands fa-css3-alt" style="color: #264DE4;"> </i> CSS </span>
+                                <span> <i class="fa-brands fa-js" style="color: #F7DF1E;"> </i> JavaScript </span>
+                                <span> <i class="fa-brands fa-react" style="color: #61dafb"> </i> React.js </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3: YouTube Clone -->
+                    <div class="pj-card">
+                        <div class="pj-info1">
+                            <img src="img/YouTube.png" alt="project logo">
+                            <div class="pj-links">
+                                <a href="https://github.com/akumar230523/youtube-clone" target="_blank">
+                                    <i class="fab fa-github"></i> Repo
+                                </a>
+                                <a href="https://youtube-6xin.onrender.com/" target="_blank">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                                </a>
+                            </div>
+                        </div>
+                        <div class="pj-info2">
+                            <h3> YouTube Clone </h3>
+                            <p>
+                                The YouTube Clone project is a full-stack web application built using the MERN stack.
+                                It allows users to register, log in securely using JWT authentication, and watch videos
+                                on a responsive interface.
+                                Users can search and filter videos, and interact through a comment system.
+                                Authenticated users can create channels, upload videos, and manage their own content.
+                                This project demonstrates real-world application development, covering frontend UI/UX,
+                                backend APIs, database management, and authentication.
+                            </p>
+                            <div class="pj-skills">
+                                <span> <i class="fa-brands fa-node-js" style="color: #539e43"> </i> Node.js </span>
+                                <span> <i class="fa-brands fa-react" style="color: #61dafb"> </i> React.js </span>
+                                <span> <i class="fa-solid fa-server" style="color: var(--wb-color)"> </i> Express.js </span>
+                                <span> <i class="fa-solid fa-database" style="color: #47a248"> </i> MongoDB </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+                <!-- next button -->
+                <button class="arrow right" onclick="nextCard()">
+                    <i class="fas fa-chevron-right fa-xl"></i>
+                </button>
+            </div>
+            <!-- Indicators -->
+            <div id="indicators"></div>
+            <!-- More Projects -->
+            <p class="more-projects">
+                For more projects, visit my
+                <a href="https://github.com/akumar230523" target="_blank"> GitHub Profile
+                    <i class="fa-brands fa-github" style="color: var(--wb-color)"></i>
+                </a>
+            </p>
+        </section>
+
+        <!-- ------------------------------------------------------------------ Contact Section -->
+        <section class="page" id="contact">
+            <h1> Contact Me </h1>
+            <!--  -->
+            <p>
+                I am always open to discussing new projects, collaborations, or opportunities to contribute as a
+                professional developer.
+            </p>
+            <!-- Form -->
+            <form action="https://formsubmit.co/amit.kumar.270523@gmail.com" method="POST">
+                <fieldset>
+                    <legend> Send us a Message <i class="fa-solid fa-paper-plane fa-sm"></i> </legend>
+                    <input type="text" name="name" id="name" placeholder="Full Name" required />
+                    <input type="email" name="email" id="email" placeholder="Email Address" required />
+                    <input type="url" name="url" id="url" placeholder="LinkedIn URL" required />
+                    <textarea name="message" id="message" rows="5" placeholder="Type your message.." required></textarea>
+                </fieldset>
+                <button type="submit" id="submit"> Send Message </button>
+            </form>
+            <!--  -->
+            <div class="call-email">
+                <a href="tel:+919205280247" target="_blank">
+                    <i class="fa-solid fa-phone fa-xl" style="color: #00ff00"></i>
+                </a>
+                <a href="mailto:amit.kumar.270523@gmail.com" target="_blank">
+                    <i class="fa-solid fa-envelope fa-xl" style="color: var(--wb-color)"></i>
+                </a>
+            </div>
+            <!-- Follow me -->
+            <div class="follow_me">
+                <a href="https://medium.com/@akumar230523" target="_blank">
+                    <i class="fa-brands fa-medium fa-xl"></i>
+                </a>
+                <a href="https://x.com/" target="_blank">
+                    <i class="fa-brands fa-x-twitter fa-xl"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fa-brands fa-instagram fa-xl"></i>
+                </a>
+                <a href="https://web.telegram.org/k/" target="_blank">
+                    <i class="fa-brands fa-telegram fa-xl"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ------------------------------------------------------------------------------- FOOTER -->
+    <footer>
+        <!-- Review -->
+        <div class="review">
+            <h4> REVIEW </h4>
+            <a href="#home"> Home </a>
+            <br>
+            <a href="#about-me"> About </a>
+            <br>
+            <a href="#my-skills"> Skills </a>
+            <br>
+            <a href="#my-certifications"> Certifications </a>
+            <br>
+            <a href="#my-projects"> Projects </a>
+        </div>
+        <hr id="hr1">
+        <!-- Project -->
+        <div class="project">
+            <h4> PROJECT </h4>
+            <a href="https://akumar230523.github.io/portfolio/" target="_blank"> Portfolio Website </a>
+            <br>
+            <a href="https://akumar230523.github.io/weather-forecast/" target="_blank"> Weather Forecast </a>
+            <br>
+            <a href="https://youtube-6xin.onrender.com/" target="_blank"> E-commerce App </a>
+            <br>
+            <a href="https://trello-app-4xdz.onrender.com/" target="_blank"> Trello App </a>
+            <br>
+            <a href="https://youtube-6xin.onrender.com/" target="_blank"> YouTube Clone </a>
+        </div>
+        <hr id="hr2">
+        <!-- Copyright Information -->
+        <div id="cri">
+            <p> &copy; 2026 Amit Kumar <br> All Rights Reserved </p>
+        </div>
+    </footer>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+
+</body>
+
+</html>
